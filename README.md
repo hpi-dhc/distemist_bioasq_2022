@@ -6,11 +6,6 @@
 - Download trained models and dictionaries from Zenodo (https://zenodo.org/record/6642064) and extract into `dicts` and `models`
 - Install Python dependencies (*TODO: describe how*)
 
-
-## Dependencies
-
-TODO
-
 ## Subtrack 1: Named Entity Recognition
 
 ### Model Training
