@@ -20,8 +20,8 @@ We performed a hyperparameter grid search over the parameters listed in `ner_hyp
 
 ### Prediction
 
-See: [notebooks/01_Entities.iypnb](notebooks/01_Entities.iypnb)
+See: [notebooks/01_Entities.ipynb](notebooks/01_Entities.ipynb)
 
 ## Subtrack 2: Entity Linking
 
-See: [notebooks/02_Entity_Linking.iypnb](notebooks/02_Entity_Linking.iypnb)
+See: [notebooks/02_Entity_Linking.ipynb](notebooks/02_Entity_Linking.ipynb)
