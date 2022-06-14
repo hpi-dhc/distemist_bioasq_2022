@@ -1,0 +1,52 @@
+upload_artifact: false
+checkpoint: ~
+cuda: 0
+checkpoint_path: checkpoints
+name: distemist-ner
+link: false
+
+run_full_training: false
+
+wand_db_project: 'distemist-ner'
+
+# Default training parameters
+output_file : "models"
+random_seed: 42
+label_all_tokens: false
+
+# Hugging Face training parameters
+base_model_checkpoint : PlanTL-GOB-ES/roberta-base-biomedical-clinical-es
+batch_size: 32
+num_train_epochs: 100
+fp16: true
+lr_scheduler_type: "linear"
+warmup_ratio: 0.0
+gradient_checkpointing: true
+
+weight_decay: 0.2
+learning_rate: 1e-5
+label_smoothing_factor: 0.0
+
+# Checkpointing
+save_steps: 10000
+keep_all_checkpoints: false
+
+# Hydra settings
+version: 1
+
+handlers:
+  console:
+    class: rich.logging.RichHandler
+    
+disable_existing_loggers: false
+
+output_base_path: ./outputs/${name}
+
+date_run: ${name}/${now:%Y-%m-%d_%H-%M-%S}
+
+hydra:
+  run:
+    dir: ${output_base_path}/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: ./multirun/${name}/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.num}_${hydra.job.override_dirname}
