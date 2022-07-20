@@ -4,7 +4,9 @@
 
 - Download DisTEMIST data (v5.0) from Zenodo (https://zenodo.org/record/6532684) and unzip content into `data/distemist`
 - Download trained models and dictionaries from Zenodo (https://zenodo.org/record/6642064) and extract into `dicts` and `models`
-- Install Python dependencies (*TODO: describe how*)
+- Install Python dependencies:
+    - `pip install -r requirements.txt`
+    - `python -m spacy download es_core_news_md`
 
 ## Subtrack 1: Named Entity Recognition
 
