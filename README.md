@@ -26,4 +26,4 @@ See: [notebooks/01_Entities.ipynb](notebooks/01_Entities.ipynb)
 
 ## Subtrack 2: Entity Linking
 
-See: [notebooks/02_Entity_Linking.ipynb](notebooks/02_Entity_Linking.ipynb)
+See: [notebooks/02_Linking.ipynb](notebooks/02_Linking.ipynb)
